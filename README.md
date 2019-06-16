@@ -36,3 +36,16 @@ soo use is a combination of  require and refer
 
 
 ### Lets get some routes
+
+- Compojure
+- what is this `Ring` thing
+- Ah its like `Rack` or  Elixir/Erlang `Plug`
+  which means that Im probably already using it under http-server? Is there a way to see a projects dependency tree?
+
+```clj
+(:require [compojure.core :refer :all]
+            [compojure.route :as route])
+(defroutes app
+  (GET "/" [] "<h1>Hello World</h1>")
+  (route/not-found "<h1>Page not found</h1>"))
+```
