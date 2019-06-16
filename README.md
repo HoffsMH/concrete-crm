@@ -1,41 +1,34 @@
 # concrete-crm
 
-at the very least we can be sure that everything is a form right?
+- at the very least we can be sure that everything is a form right?
 
-why do namespaces typically begin with `org.`?
+- why do namespaces typically begin with `org.`?
 
 
-the name for the type of data structure that `'hello-world` evaluates to is "symbol"
-`'map`
+- the name for the type of data structure that `'hello-world` evaluates to is "symbol"
 
-but the name for the type of data structure that `'(hello-world)` evaluates to is "list"? in this case a list with a symbol in it
+- but the name for the type of data structure that `'(hello-world)` evaluates to is "list"? in this case a list with a symbol in it
 
-The mechanism at play in both is "quoting"
+- The mechanism at play in both is "quoting"
 
-putting a symbol down on a .clj file results in
-evaluation of that symbol which starts a  symbol resolution
-
-symbol -> variable (Example #'symbol) -> value
-
-why is the middle phase needed?
+- putting a symbol down on a .clj file results in evaluation of that symbol which starts a symbol resolution
+  - symbol -> variable (Example #'symbol) -> value
+  - why is the middle phase needed?
 
 
 ### I Have it serving some Text!
-but why does all the stuff I learned from https://www.braveclojure.com/organization/#Anchor
+- but why does all the stuff I learned from https://www.braveclojure.com/organization/#Anchor
 not seem to matter. In the end I had to use `(:use org.httpkit.server)` within the `ns` in order to get access to `run-server`
+  - for instance`(use org.httpkit.server)` didn't work!
 
-`(use org.httpkit.server)` didn't work!
+  - JK forgot to quote the symbol :D looks like quoted outside of ns macro, unquoted otherwise
 
-JK forgot to quote the symbol :D
-looks like quoted outside of ns macro, unquoted otherwise
+- how could this basically empty app be tested? not sure how to test `run-server`
 
-how could this basically empty app be tested?
-not sure how to test `server`
+- soo use is a combination of require and refer?
+Looks like yes.
 
-soo use is a combination of require and refer?
-Looks like yes
-
-Why underscores for file names?
+- Why underscores for file names?
 Can't seem to find an answer on why instead of dashes since everything else seems to be dashes
 
 ### Lets get some routes
@@ -58,16 +51,18 @@ yes but it requires maven
 ```
 
 
-can I test the function produced with `defroutes`?
+- Can I test the function produced with `defroutes`?
 Yup made one! :D
 
-what about linting? It feels like im writing these things wrong
+- what about linting? It feels like im writing these things wrong
 https://tonsky.me/blog/clojurefmt/
 
-is def affected by lexical scoping?
-I ~THINK~ so...
+- is def affected by lexical scoping?
+I *THINK* so...
 
-Can I `def` in another list?
+- Can I `def` in another list?
 looks like the answer is yes but are there other rules around it?
 
 ### Handlers
+
+- lets see if I can greet a specific user?
