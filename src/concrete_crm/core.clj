@@ -1,10 +1,9 @@
 (ns concrete-crm.core
-  (:use org.httpkit.server)
   (:gen-class))
 
 
 
-;; (require org.httpkit.server)
+(use 'org.httpkit.server)
 
 (defn -main
   "I don't do a whole lot ... yet."

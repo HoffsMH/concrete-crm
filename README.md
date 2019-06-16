@@ -25,3 +25,5 @@ but why does all the stuff I learned from https://www.braveclojure.com/organizat
 not seem to matter. In the end I had to use `(:use org.httpkit.server)` within the `ns` in order to get access to `run-server`
 
 `(use org.httpkit.server)` didn't work!
+
+JK forgot to quote the symbol :D
