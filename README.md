@@ -30,10 +30,13 @@ JK forgot to quote the symbol :D
 looks like quoted outside of ns macro, unquoted otherwise
 
 how could this basically empty app be tested?
+not sure how to test `server`
 
-soo use is a combination of  require and refer
+soo use is a combination of require and refer?
+Looks like yes
 
 Why underscores for file names?
+Can't seem to find an answer on why instead of dashes since everything else seems to be dashes
 
 ### Lets get some routes
 
@@ -41,6 +44,10 @@ Why underscores for file names?
 - what is this `Ring` thing
 - Ah its like `Rack` or  Elixir/Erlang `Plug`
   which means that Im probably already using it under http-server? Is there a way to see a projects dependency tree?
+
+https://stackoverflow.com/questions/33093833/display-complete-dependency-tree-with-leiningen
+yes but it requires maven
+
 
 ```clj
 (:require [compojure.core :refer :all]
@@ -52,9 +59,15 @@ Why underscores for file names?
 
 
 can I test the function produced with `defroutes`?
+Yup made one! :D
+
 what about linting? It feels like im writing these things wrong
+https://tonsky.me/blog/clojurefmt/
 
 is def affected by lexical scoping?
+I ~THINK~ so...
+
 Can I `def` in another list?
+looks like the answer is yes but are there other rules around it?
 
 ### Handlers
