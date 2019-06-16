@@ -33,6 +33,8 @@ how could this basically empty app be tested?
 
 soo use is a combination of  require and refer
 
+Why underscores for file names?
+
 
 
 ### Lets get some routes
@@ -49,3 +51,12 @@ soo use is a combination of  require and refer
   (GET "/" [] "<h1>Hello World</h1>")
   (route/not-found "<h1>Page not found</h1>"))
 ```
+
+
+can I test the function produced with `defroutes`?
+what about linting? It feels like im writing these things wrong
+
+is def affected by lexical scoping?
+Can i `def` in another list?
+
+### Handlers

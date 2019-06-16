@@ -1,7 +1,14 @@
 (ns concrete-crm.core-test
   (:require [clojure.test :refer :all]
-            [concrete-crm.core :refer :all]))
+            [concrete-crm.core :refer :all]
+            [support.request-helper :refer :all]
+            ))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest test-router
+  (testing "test the happy path on router"
+    (let [
+          request (gen-request "/")
+          response (app request)
+          ]
+      (is (= (:status response) 200)
+    ))))
