@@ -5,6 +5,9 @@
             [hiccup.core :refer :all])
   (:gen-class))
 
+(defn user-handler
+  [name]
+  (html [:span {:class "foo"} name]))
 
 (defroutes app
   (GET "/" request
@@ -17,7 +20,3 @@
 (defn -main
   [& args]
   (run-server app {:port 8080}))
-
-(defn user-handler
-  [name]
-  (html [:span {:class "foo"} name]))
