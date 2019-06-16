@@ -10,8 +10,7 @@
           request (gen-request "/")
           response (app request)
           ]
-      (is (= (:status response) 200)
-    ))))
+      (is (= (:status response) 200)))))
 
 (deftest test-scope
   (testing "can we def?"
@@ -20,5 +19,4 @@
     )
 
   ;; this will work
-  (println taco)
-  )
+  (println taco))

@@ -66,3 +66,11 @@ looks like the answer is yes but are there other rules around it?
 ### Handlers
 
 - lets see if I can greet a specific user?
+  yup. looks like we can render html as well lets refine that
+
+- how is db interaction handled?
+
+migrations and database interaction appear to be separate in this ecosystem
+
+- installed this https://github.com/mmcgrana/clj-stacktrace
+hopefully that helps with the stack traces some
