@@ -74,3 +74,20 @@ migrations and database interaction appear to be separate in this ecosystem
 
 - installed this https://github.com/mmcgrana/clj-stacktrace
 hopefully that helps with the stack traces some
+
+- learning how to read auto-doc signature.
+The view source button is nice
+
+http://weavejester.github.io/hiccup/hiccup.form.html
+
+which let me get to
+
+```clj
+  (html [:p
+         (form-to [:POST "/numbers"])
+         ]))
+
+```
+
+
+https://github.com/weavejester/compojure/wiki/Destructuring-Syntax
