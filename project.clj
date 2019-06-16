@@ -7,6 +7,7 @@
                  [org.clojure/clojure "1.10.0"]
                  [http-kit "2.3.0"]
                  [compojure "1.6.1"]
+                 [hiccup "1.0.5"]
                  ]
   :main ^:skip-aot concrete-crm.core
   :target-path "target/%s"
