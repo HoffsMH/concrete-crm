@@ -27,3 +27,8 @@ not seem to matter. In the end I had to use `(:use org.httpkit.server)` within t
 `(use org.httpkit.server)` didn't work!
 
 JK forgot to quote the symbol :D
+looks like quoted outside of ns macro, unquoted otherwise
+
+how could this basically empty app be tested?
+
+soo use is a combination of  require and refer
