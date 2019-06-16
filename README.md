@@ -32,3 +32,7 @@ looks like quoted outside of ns macro, unquoted otherwise
 how could this basically empty app be tested?
 
 soo use is a combination of  require and refer
+
+
+
+### Lets get some routes
