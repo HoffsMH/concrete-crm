@@ -12,3 +12,13 @@
           ]
       (is (= (:status response) 200)
     ))))
+
+(deftest test-scope
+  (testing "can we def?"
+    (def taco "hi")
+    (is (= taco "hi"))
+    )
+
+  ;; this will work
+  (println taco)
+  )

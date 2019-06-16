@@ -35,8 +35,6 @@ soo use is a combination of  require and refer
 
 Why underscores for file names?
 
-
-
 ### Lets get some routes
 
 - Compojure
@@ -57,6 +55,6 @@ can I test the function produced with `defroutes`?
 what about linting? It feels like im writing these things wrong
 
 is def affected by lexical scoping?
-Can i `def` in another list?
+Can I `def` in another list?
 
 ### Handlers
