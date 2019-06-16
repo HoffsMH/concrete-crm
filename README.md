@@ -91,3 +91,7 @@ which let me get to
 
 
 https://github.com/weavejester/compojure/wiki/Destructuring-Syntax
+
+cant get form params out of this
+https://stackoverflow.com/questions/27891597/clojure-hiccup-how-can-i-know-which-submit-button-got-pressed-in-a-form
+doesn't seem to help either :(

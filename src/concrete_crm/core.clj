@@ -12,33 +12,25 @@
                      (text-field {:placeholder "189"} "number")
                      (submit-button "submit"))]))
 
-(defn alt-user-handler
-  [name]
-  "<form action=\"/numbers\" method=\"post\">
-  <div>
-    <label for=\"say\">What greeting do you want to say?</label>
-    <input name=\"say\" id=\"say\" value=\"Hi\">
-  </div>
-  <div>
-    <label for=\"to\">Who do you want to say it to?</label>
-    <input name=\"to\" id=\"to\" value=\"Mom\">
-  </div>
-  <div>
-    <button>Send my greetings</button>
-  </div>
-</form>"
-)
+(defn quick-form
+  []
+  (html
+   (form-to {:enctype "multipart/form-data"}
+            [:post "/numbers"]
+            (text-field "Hello")
+            (submit-button {:class "btn" :name "submit"} "Save")
+            (submit-button {:class "btn" :name "submit"} "Clone"))))
 
 (defn number-handler
   [number]
   number)
 
 (defroutes app
-  (POST "/numbers" req (str "suup" req))
+  (POST "/numbers" [:as request] (str (request :multipart-params)))
   (GET "/" request
        (str "<h1>Hello World</h1>" request))
   (GET "/bye" [] "<h1>Bye World</h1>")
-  (GET "/user/:id" [id] (alt-user-handler id))
+  (GET "/user/:id" [id] (quick-form))
   (route/not-found "<h1>Page not found</h1>"))
 
 (defn -main
